@@ -1,0 +1,3 @@
+# spring:
+    # datasource:
+        # url: jdbc:mariadb://39.119.103.110:3306/delightland?characterEncoding=UTF-8&serverTimezone=UTC
