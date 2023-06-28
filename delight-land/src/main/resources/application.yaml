@@ -1,3 +1,6 @@
-# spring:
-    # datasource:
-        # url: jdbc:mariadb://39.119.103.110:3306/delightland?characterEncoding=UTF-8&serverTimezone=UTC
+spring:
+    datasource:
+        driver-class-name: org.mariadb.jdbc.Driver
+        url: jdbc.mariadb://database-delightland.ctajtvbrikhb.ap-northeast-2.rds.amazonaws.com:3306/delightland?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+        username: admin
+        password: fan!tasy1005
