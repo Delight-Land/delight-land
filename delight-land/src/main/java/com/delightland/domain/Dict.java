@@ -1,4 +1,4 @@
-package com.delightland.dto;
+package com.delightland.domain;
 
 import java.util.List;
 
@@ -11,12 +11,13 @@ import lombok.Setter;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class DictDto {
+public class Dict {
     
     private int dict_no;
     private String dict_word;
     private String dict_mean;
 
-    private List<SF9> member;
+    private String sf9_name;
+    private long file_no;
 
 }

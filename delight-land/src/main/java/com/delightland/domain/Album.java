@@ -1,4 +1,4 @@
-package com.delightland.dto;
+package com.delightland.domain;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -12,7 +12,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class AlbumDto {
+public class Album {
     
 
     private int al_no;
@@ -20,6 +20,6 @@ public class AlbumDto {
     private String al_title;
     private LocalDate al_date;
     
-    private List<String> sf9_name;
-    private List<Long> file_no;
+    private String sf9_name;
+    private long file_no;
 }
