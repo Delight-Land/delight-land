@@ -1,4 +1,4 @@
-package com.delightland.dto;
+package com.delightland.domain;
 
 import java.time.LocalDateTime;
 
@@ -11,7 +11,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class AttachFilesDto {
+public class AttachFiles {
     
     private long file_no;
     private String file_name;

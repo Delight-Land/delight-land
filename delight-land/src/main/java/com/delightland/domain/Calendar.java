@@ -1,4 +1,4 @@
-package com.delightland.dto;
+package com.delightland.domain;
 
 import java.time.LocalDate;
 
@@ -11,7 +11,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class CalendarDto {
+public class Calendar {
  
     
     private int cal_no;

@@ -2,10 +2,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.delightland.mappper.SF9Mapper">
+<mapper namespace="com.delightland.mapper.SF9Mapper">
 
     <insert id="newMember">
+        insert into SF9(sf9_name, sf9_birth, sf9_insta)
+        value(#{sf9_name}, #{sf9_birth}, #{sf9_insta})
     </insert>
-
 
 </mapper>

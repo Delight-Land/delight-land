@@ -1,4 +1,4 @@
-package com.delightland.dto;
+package com.delightland.domain;
 
 import java.time.LocalDate;
 
