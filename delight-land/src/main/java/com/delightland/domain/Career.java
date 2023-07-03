@@ -16,7 +16,7 @@ public class Career {
     private long career_no;
     private String career_name;
     private String career_role;
-    private LocalDate career_day;
+    private LocalDate career_date;
     private String sf9_name;
     private long file_no;
 }

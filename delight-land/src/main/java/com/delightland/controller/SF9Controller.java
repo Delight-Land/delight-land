@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.delightland.domain.Career;
 import com.delightland.domain.SF9;
 import com.delightland.service.SF9Service;
 
@@ -39,5 +40,12 @@ public class SF9Controller {
     public String newMember(SF9 sf9){
         boolean result = service.newMember(sf9);
         return result ? "success": "fail";
+    }
+
+    @GetMapping("/career/{sf9_no}")
+    public List<Career> Career(@PathVariable int sf9_no){
+        List<Career> result = service.careerByno(sf9_no);
+        System.out.println(result.get(0).getCareer_name().toString());
+        return  result;
     }
 }

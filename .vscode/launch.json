@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-DelightLandApplication<delight-land>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.delightland.DelightLandApplication",
+      "projectName": "delight-land",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}

@@ -1,9 +1,11 @@
 package com.delightland.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.delightland.domain.Career;
 import com.delightland.domain.SF9;
 import com.delightland.mapper.SF9Mapper;
 
@@ -40,6 +42,15 @@ public class SF9ServiceImpl implements SF9Service {
         result = sf9Mapper.findByNo(sf9_no);
         System.out.println(result);
         return sf9Mapper.findByNo(sf9_no);
+    }
+
+    @Override
+    public List<Career> careerByno(int sf9_no){
+        System.out.println(sf9_no);
+        List<Career> result = new ArrayList<>();
+        result = sf9Mapper.careerByno(sf9_no);
+        System.out.println(result);
+        return sf9Mapper.careerByno(sf9_no);
     }
 
 }
