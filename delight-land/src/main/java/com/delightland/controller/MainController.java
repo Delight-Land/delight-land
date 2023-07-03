@@ -13,17 +13,9 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class MainController {
     
-    private final SF9Service service;
-
     @GetMapping("/test")
     public void test(){
         
     }
 
-    @ResponseBody
-    @GetMapping("/new")
-    public String newMember(SF9 sf9){
-        boolean result = service.newMember(sf9);
-        return result ? "success": "fail";
-    }
 }

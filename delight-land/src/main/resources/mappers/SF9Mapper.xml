@@ -9,4 +9,16 @@
         value(#{sf9_name}, #{sf9_birth}, #{sf9_insta})
     </insert>
 
+    <select id="findAll" resultType="com.delightland.domain.SF9">
+        select sf9_no, sf9_name, sf9_birth, sf9_insta 
+        from SF9
+    </select>
+    <select id="findByName" resultType="com.delightland.domain.SF9">
+        select sf9_no, sf9_name, sf9_birth, sf9_insta
+        from SF9 where sf9_name = "영빈"
+    </select>
+    <select id="findByNo" resultType="com.delightland.domain.SF9">
+        select sf9_no, sf9_name, sf9_birth, sf9_insta
+        from SF9 where sf9_no = 1
+    </select>
 </mapper>
