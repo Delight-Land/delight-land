@@ -21,4 +21,8 @@
         select sf9_no, sf9_name, sf9_birth, sf9_insta
         from SF9 where sf9_no = 1
     </select>
+    <select id="careerByno" resultType="com.delightland.domain.Career">
+        SELECT c.career_no, c.career_name, c.career_role, c.career_date, s.sf9_name, c.file_no  
+        from Career c LEFT JOIN SF9 s ON s.sf9_no = c.sf9_no where s.sf9_no = #{sf9_no}
+    </select>
 </mapper>
