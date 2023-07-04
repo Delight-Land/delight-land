@@ -4,9 +4,25 @@
 
 <mapper namespace="com.delightland.mappper.DictMapper">
 
-    <insert id="dictInsert">
-        
+    <insert id="newDict">
+        insert into Dict(dict_word, dict_mean, file_no, sf9_no)
+        value(#{dict_word}, #{dict_mean}, #{file_no}, #{sf9_no})
     </insert>
+
+    <select id="findAll" resultType="com.delightland.domain.Dict">
+        select dict_no, dict_word, dict_mean, file_no, sf9_no
+        from Dict
+    </select>
+
+    <select id="findBySF9No" resultType="com.delightland.domain.Dict">
+        select dict_no, dict_word, dict_mean, file_no, sf9_no
+        from Dict where sf9_no = #{sf9_no}
+    </select>
+
+    <select id="findByWord" resultType="com.delightland.domain.Dict">
+        select dict_no, dict_word, dict_mean, file_no, sf9_no
+        from Dict where dict_word = #{dict_word}
+    </select>
 
 
 </mapper>
