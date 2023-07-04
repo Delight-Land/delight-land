@@ -32,10 +32,10 @@ public class DictController {
         return result;
     }
 
-    @GetMapping("/{sf9_no}")
-    public List<Dict> findBySF9No(@PathVariable int sf9_no){
+    @GetMapping("/{sf9_name}")
+    public List<Dict> findBySF9Name(@PathVariable String sf9_name){
         List<Dict> result = new ArrayList<>();
-        result = service.findBySF9No(sf9_no);
+        result = service.findBySF9Name(sf9_name);
         return result;
     }
 

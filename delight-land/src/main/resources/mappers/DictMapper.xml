@@ -2,25 +2,25 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.delightland.mappper.DictMapper">
+<mapper namespace="com.delightland.mapper.DictMapper">
 
     <insert id="newDict">
-        insert into Dict(dict_word, dict_mean, file_no, sf9_no)
-        value(#{dict_word}, #{dict_mean}, #{file_no}, #{sf9_no})
+        insert into Dict(dict_word, dict_mean, file_no, sf9_name)
+        value(#{dict_word}, #{dict_mean}, #{file_no}, #{sf9_name})
     </insert>
 
     <select id="findAll" resultType="com.delightland.domain.Dict">
-        select dict_no, dict_word, dict_mean, file_no, sf9_no
+        select dict_no, dict_word, dict_mean, file_no, sf9_name
         from Dict
     </select>
 
-    <select id="findBySF9No" resultType="com.delightland.domain.Dict">
-        select dict_no, dict_word, dict_mean, file_no, sf9_no
-        from Dict where sf9_no = #{sf9_no}
+    <select id="findBySF9Name" resultType="com.delightland.domain.Dict">
+        select dict_no, dict_word, dict_mean, file_no, sf9_name
+        from Dict where sf9_name like #{sf9_name}
     </select>
 
     <select id="findByWord" resultType="com.delightland.domain.Dict">
-        select dict_no, dict_word, dict_mean, file_no, sf9_no
+        select dict_no, dict_word, dict_mean, file_no, sf9_name
         from Dict where dict_word = #{dict_word}
     </select>
 

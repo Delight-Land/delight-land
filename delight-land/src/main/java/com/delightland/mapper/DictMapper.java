@@ -12,7 +12,7 @@ public interface DictMapper {
 
     public List<Dict> findAll();
 
-    public List<Dict> findBySF9No(int sf9_no);
+    public List<Dict> findBySF9Name(String sf9_name);
 
     public Dict findByWord(String sf9_word);
 

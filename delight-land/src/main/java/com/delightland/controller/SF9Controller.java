@@ -30,9 +30,9 @@ public class SF9Controller {
         SF9 result =  service.findByName(sf9_name);
         return result != null ? result : null;
     }
-    @GetMapping("/{sf9_no}")
-    public SF9 findByNo(@PathVariable int sf9_no){
-        SF9 result =  service.findByNo(sf9_no);
+    @GetMapping("/{sf9_name}")
+    public SF9 findByNo(@PathVariable String sf9_name){
+        SF9 result =  service.findByName(sf9_name);
         return result;
     }
 

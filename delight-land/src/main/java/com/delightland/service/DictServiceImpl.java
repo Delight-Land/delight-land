@@ -20,8 +20,10 @@ public class DictServiceImpl implements DictService{
     }
 
     @Override
-    public List<Dict> findBySF9No(int sf9_no) {
-        return mapper.findBySF9No(sf9_no);
+    public List<Dict> findBySF9Name(String name) {
+        String sf9_name = "%" + name + "%";
+        System.out.println(sf9_name);
+        return mapper.findBySF9Name(sf9_name);
     }
 
     @Override
@@ -34,7 +36,7 @@ public class DictServiceImpl implements DictService{
         if(dict.getFile_no()==0){
             //dict.setFile_no(1);
         }
-        if(dict.getSf9_no()==0){
+        if(dict.getSf9_name().isEmpty()){
             //dict.setSf9_no(1);
         }
         return mapper.newDict(dict);

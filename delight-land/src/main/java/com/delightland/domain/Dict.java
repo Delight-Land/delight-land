@@ -15,7 +15,7 @@ public class Dict {
     private String dict_word;
     private String dict_mean;
 
-    private int sf9_no;
+    private String sf9_name;
     private long file_no;
 
 }
