@@ -8,3 +8,14 @@ mybatis:
     config-location: classpath:/mybatis-config.xml
     mapper-locations:
         - mappers/*.xml
+cloud:
+  aws:
+    credentials:
+      access-key: AKIAWD26CC2ZRSQHXL32
+      secret-key: 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
+    s3:
+      bucket: delight-land
+    region:
+      static: ap-northeast-2
+    stack:
+      auto: false
