@@ -4,18 +4,10 @@ spring:
         url: jdbc:mariadb://database-delightland.ctajtvbrikhb.ap-northeast-2.rds.amazonaws.com:3306/delightland?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
         username: admin
         password: fan!tasy1005
+    profiles:
+        include: aws
 mybatis:
     config-location: classpath:/mybatis-config.xml
     mapper-locations:
         - mappers/*.xml
-cloud:
-  aws:
-    credentials:
-      access-key: AKIAWD26CC2ZRSQHXL32
-      secret-key: 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
-    s3:
-      bucket: delight-land
-    region:
-      static: ap-northeast-2
-    stack:
-      auto: false
+
