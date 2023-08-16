@@ -36,6 +36,10 @@ dependencies {
 	//maria
 	implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.4.1'
 	compileOnly 'org.springframework.cloud:spring-cloud-starter-aws:2.0.1.RELEASE'
+
+	implementation 'io.springfox:springfox-boot-starter:3.0.0'
+    implementation 'io.springfox:springfox-swagger-ui:3.0.0'
+
 }
 
 tasks.named('test') {

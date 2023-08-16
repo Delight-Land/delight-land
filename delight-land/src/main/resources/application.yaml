@@ -6,8 +6,10 @@ spring:
         password: fan!tasy1005
     profiles:
         include: aws
+    mvc:
+        pathmatch:
+            matching-strategy: ant_path_matcher
 mybatis:
     config-location: classpath:/mybatis-config.xml
     mapper-locations:
         - mappers/*.xml
-
