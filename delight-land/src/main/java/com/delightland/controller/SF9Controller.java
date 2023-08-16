@@ -26,7 +26,7 @@ public class SF9Controller {
     }
 
     @GetMapping("/name")
-    public SF9 findByName( String sf9_name){
+    public SF9 findByName(String sf9_name){
         SF9 result =  service.findByName(sf9_name);
         return result != null ? result : null;
     }

@@ -4,7 +4,10 @@ spring:
         url: jdbc:mariadb://database-delightland.ctajtvbrikhb.ap-northeast-2.rds.amazonaws.com:3306/delightland?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
         username: admin
         password: fan!tasy1005
+    profiles:
+        include: aws
 mybatis:
     config-location: classpath:/mybatis-config.xml
     mapper-locations:
         - mappers/*.xml
+
